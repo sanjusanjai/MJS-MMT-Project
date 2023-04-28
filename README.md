@@ -21,4 +21,4 @@
 `./dataCollection/mp3.py` Uses the above generated csv files for each year to get views of each song using the corresponding youtube link to sort the songs. Once songs were sorted, I used the youtube-dl package to check the duration of each song if it was lesser than 2 minutes, then that song was removed from the list and this sorted list of dictionaries was saved to local storage as getting youtube views for each song and checking song duration took a surprisingly long time. Using this sorted list of songs and links, 30 top and bottom songs were downloaded from each year using youtube-dl package and trimmed to include only the middle 2 minutes of the song.
 <br>
 `./dataCollection/ytViews.sh` Bash script to extract the views of a song from the youtube page for the corresponding song.
-
+`get_feats.m` reads all .mp3/.wav files in a folder (file extension to be read can be changed in the code), stores all the file names in a file named `names.txt` and stores the features for each song in one row per song fashion in the `data.txt` file.
